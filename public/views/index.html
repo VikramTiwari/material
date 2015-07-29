@@ -1,27 +1,27 @@
-<div class="" data-ng-controller="MaterialController">
-  <h1>Example view from your new awesome package</h1>
-  <h2>Package: {{package.name}}</h2>
-  <ol>
-    <li>
-      <a href="/api/material/example/anyone" target="_self">Server route that anyone can access</a>
-    </li>
-    <li>
-      <a href="/api/material/example/auth" target="_self">Server route that requires authentication</a>
-    </li>
-    <li>
-      <a href="/api/material/example/admin" target="_self">Server route that requires admin user</a>
-    </li>
-    <li>
-      <a href="/api/material/example/render" target="_self">Raw Html rendering example from using swig</a>
-    </li>
-  </ol>
-  <h3><img src="/material/assets/img/logo.png" /></h3>
-  </br>
-  <p class="alert alert-info">You can find your package in /packages/material</p>
-  </br>
-  <p class="alert alert-warning">MEAN versions prior to 0.3.2 will be in /node_modules/material</p>
-  </br>
-  <h3><a href="http://learn.mean.io">Documentation</a></h3>
-  </br>
+<div ng-controller="MaterialController">
+	<md-content>
+		<md-toolbar>
+			<div class="md-toolbar-tools">
+				<md-button class="md-icon-button" aria-label="Settings">
+					<md-icon class="material-icons">code</md-icon>
+				</md-button>
+				<h2>
+					<span>Sample Toolbar with Icon Buttons</span>
+				</h2>
+				<span flex></span>
+				<md-button class="md-icon-button" aria-label="Favorite">
+					<md-icon class="material-icons" style="color: greenyellow;">favorite</md-icon>
+				</md-button>
+				<md-button class="md-icon-button" aria-label="More">
+					<md-icon class="material-icons">more_vert</md-icon>
+				</md-button>
+			</div>
+		</md-toolbar>
+    <section layout="row" layout-sm="column" layout-align="center center">
+      <md-button class="md-raised" href="/api/material/example/anyone" target="_self">Public Route</md-button>
+      <md-button class="md-raised md-primary" href="/api/material/example/auth" target="_self">Authenticated Route</md-button>
+      <md-button ng-disabled="true" class="md-raised md-primary" href="/api/material/example/admin" target="_self">Admin Only</md-button>
+      <md-button class="md-raised md-warn" href="/api/material/example/render" target="_self">Raw Html using swig</md-button>
+    </section>
+	</md-content>
 </div>
-
