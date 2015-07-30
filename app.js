@@ -4,13 +4,15 @@
  * Defining the Package
  */
 var Module = require('meanio').Module,
-	Material = new Module('material');
+	favicon = require('serve-favicon');
+
+var Material = new Module('material');
 
 /*
  * All MEAN packages require registration
  * Dependency injection is used to define required modules
  */
-Material.register(function(app, auth, database) {
+Material.register(function(app, auth, database, circles) {
 
 	//We enable routing. By default the Package Object is passed to the routes
 	Material.routes(app, auth, database);
@@ -19,7 +21,7 @@ Material.register(function(app, auth, database) {
 		absolute: false
 	});
 
-  Material.aggregateAsset('js', '../lib/angular/angular.min.js', {
+	Material.aggregateAsset('js', '../lib/angular/angular.min.js', {
 		absolute: false
 	});
 
@@ -34,6 +36,15 @@ Material.register(function(app, auth, database) {
 	Material.aggregateAsset('js', '../lib/angular-material/angular-material.min.js', {
 		absolute: false
 	});
+
+	// Set views path, template engine and default layout
+  app.set('views', __dirname + '/server/views');
+
+  // Setting the favicon and static folder
+  app.use(favicon(__dirname + '/public/assets/img/favicon.ico'));
+
+  // Adding robots and humans txt
+  app.useStatic(__dirname + '/public/assets/static');
 
 	//We are adding a link to the main menu for all authenticated users
 	Material.menus.add({
