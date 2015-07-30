@@ -12,7 +12,7 @@ var Material = new Module('material');
  * All MEAN packages require registration
  * Dependency injection is used to define required modules
  */
-Material.register(function(app, auth, database) {
+Material.register(function(app, auth, database, circles) {
 
 	//We enable routing. By default the Package Object is passed to the routes
 	Material.routes(app, auth, database);
