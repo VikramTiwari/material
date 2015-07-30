@@ -5,9 +5,9 @@ var mean = require('meanio');
 module.exports = function(Material, app, auth, database) {
 
 	// Home route
-	var material = require('../controllers/material');
+	var index = require('../controllers/index');
 	app.route('/')
-		.get(material.render);
+		.get(index.render);
 
 	app.get('/*', function(req, res, next) {
 		res.header('workerID', JSON.stringify(mean.options.workerid));

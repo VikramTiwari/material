@@ -16,7 +16,7 @@
 //   $viewPathProvider.override('system/views/index.html', 'material/views/index.html');
 // }]);
 
-angular.module('mean.material').controller('MaterialController', ['$scope', 'Global', 'Material',
+angular.module('mean.material').controller('IndexController', ['$scope', 'Global', 'Material',
 	function($scope, Global) {
 		$scope.global = Global;
 		$scope.sites = {
