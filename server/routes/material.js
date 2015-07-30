@@ -1,27 +1,16 @@
 'use strict';
 
-/* jshint -W098 */
-// The Package is past automatically as first parameter
+var mean = require('meanio');
+
 module.exports = function(Material, app, auth, database) {
 
-  app.get('/api/material/example/anyone', function(req, res, next) {
-    res.send('Anyone can access this');
-  });
+	// Home route
+	var material = require('../controllers/material');
+	app.route('/')
+		.get(material.render);
 
-  app.get('/api/material/example/auth', auth.requiresLogin, function(req, res, next) {
-    res.send('Only authenticated users can access this');
-  });
-
-  app.get('/api/material/example/admin', auth.requiresAdmin, function(req, res, next) {
-    res.send('Only users with Admin role can access this');
-  });
-
-  app.get('/api/material/example/render', function(req, res, next) {
-    Material.render('index', {
-      package: 'material'
-    }, function(err, html) {
-      //Rendering a view from the Package server/views
-      res.send(html);
-    });
-  });
+	app.get('/*', function(req, res, next) {
+		res.header('workerID', JSON.stringify(mean.options.workerid));
+		next(); // http://expressjs.com/guide.html#passing-route control
+	});
 };
