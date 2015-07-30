@@ -23,7 +23,7 @@ Material.register(function(app, auth, database) {
 		absolute: false,
 		group: 'header'
 	});
-	// 
+
 	// Material.aggregateAsset('js', '../lib/angular/angular.min.js', {
 	// 	absolute: false
 	// });
