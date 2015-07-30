@@ -1,4 +1,4 @@
-<div ng-controller="MaterialController">
+<!-- <div ng-controller="MaterialController">
 	<md-content>
 		<md-toolbar>
 			<div class="md-toolbar-tools">
@@ -24,9 +24,34 @@
 			<md-button class="md-raised md-warn" href="/api/material/example/render" target="_self">Raw Html using swig</md-button>
 		</section>
 	</md-content>
-</div>
+</div> -->
 
 <section class="welcome container-fluid" data-ng-controller="IndexController">
+	<md-content>
+		<md-toolbar>
+			<div class="md-toolbar-tools">
+				<md-button class="md-icon-button" aria-label="Settings">
+					<md-icon class="material-icons">code</md-icon>
+				</md-button>
+				<h2>
+					<span>Sample Toolbar with Icon Buttons</span>
+				</h2>
+				<span flex></span>
+				<md-button class="md-icon-button" aria-label="Favorite">
+					<md-icon class="material-icons" style="color: greenyellow;">favorite</md-icon>
+				</md-button>
+				<md-button class="md-icon-button" aria-label="More">
+					<md-icon class="material-icons">more_vert</md-icon>
+				</md-button>
+			</div>
+		</md-toolbar>
+		<section layout="row" layout-sm="column" layout-align="center center">
+			<md-button class="md-raised" href="/api/material/example/anyone" target="_self">Public Route</md-button>
+			<md-button class="md-raised md-primary" href="/api/material/example/auth" target="_self">Authenticated Route</md-button>
+			<md-button ng-disabled="true" class="md-raised md-primary" href="/api/material/example/admin" target="_self">Admin Only</md-button>
+			<md-button class="md-raised md-warn" href="/api/material/example/render" target="_self">Raw Html using swig</md-button>
+		</section>
+	</md-content>
 	<div class="col-md-12 first">
 		MEAN.io makes building apps simpler and faster. With this website framework, you can <a href="https://github.com/linnovate/mean/wiki/CLI#user-management">create members</a>, </br>
 		articles, or <a href="http://mean.io/#!/packages">add more features</a> with a package from the community.
