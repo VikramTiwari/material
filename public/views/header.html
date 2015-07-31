@@ -1,0 +1,51 @@
+<div data-role="navigation" ng-controller="HeaderController as hdrctr">
+	<md-content>
+		<md-toolbar>
+			<div class="md-toolbar-tools">
+
+				<h2 ui-sref="home" >
+					<span mean-token="'site-title'">MEAN</span>
+				</h2>
+
+				<md-button class="md-button" aria-label="{{item.link}}" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}" ng-repeat="item in hdrctr.menus.main" mean-token="item.link" ui-sref="{{item.link}}">
+					<md-icon class="material-icons">more_vert</md-icon>
+					<span>{{item.title}}</span>
+				</md-button>
+				<span flex></span>
+
+				<div class="text-edit" ng-show="hdrctr.hdrvars.authenticated">
+					<div class="pull-right" mean-token-editable></div>
+					<div class="pull-right" mean-translate></div>
+				</div>
+
+				<span ng-show="!hdrctr.hdrvars.authenticated">
+					<md-button class="md-button" aria-label="Join" ui-sref='auth.register'>
+						<md-icon class="material-icons">favorite</md-icon>
+						<span>Join</span>
+					</md-button>
+					<md-button class="md-button" aria-label="Login" ui-sref='auth.login'>
+						<md-icon class="material-icons">favorite</md-icon>
+						<span>Register</span>
+					</md-button>
+				</span>
+
+				<span>
+					<md-menu>
+						<md-button aria-label="user menu" class="md-button" ng-click="$mdOpenMenu()">
+							<md-icon md-menu-origin class="material-icons">phone</md-icon>
+							<span>{{hdrctr.hdrvars.user.name}}</span>
+						</md-button>
+						<md-menu-content width="4">
+							<md-menu-item>
+								<md-button ng-click="hdrctr.logout()">
+									<md-icon class="material-icons" md-menu-align-target>dialpad</md-icon>
+									Log Out
+								</md-button>
+							</md-menu-item>
+						</md-menu-content>
+					</md-menu>
+				</span>
+			</div>
+		</md-toolbar>
+	</md-content>
+</div>
