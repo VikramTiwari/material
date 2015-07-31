@@ -1,3 +1,8 @@
-<h1>This is rendered from the package itself.</h1>
-<h2>The package uses swig by default</h2>
-<img href="http://mean.io" src="/{{package}}/assets/img/logo.png" />
+{% extends 'layouts/default.html' %}
+{% block content %}
+  <section data-ui-view ></section>
+  <script type="text/javascript">
+    window.user = {{user|json|safe}};
+    window.modules = null;
+  </script>
+{% endblock %}
