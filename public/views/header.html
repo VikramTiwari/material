@@ -18,18 +18,18 @@
 					<div class="pull-right" mean-translate></div>
 				</div>
 
-				<span ng-show="!hdrctr.hdrvars.authenticated">
-					<md-button class="md-button" aria-label="Join" ui-sref="auth.register">
+				<span ng-show="!hdrctr.hdrvars.authenticated" layout="row">
+					<md-button class="md-button" aria-label="Join" ui-sref="auth.register" flex>
 						<md-icon class="material-icons">person_add</md-icon>
 						<span>Join</span>
 					</md-button>
-					<md-button class="md-button" aria-label="Login" ui-sref="auth.login">
+					<md-button class="md-button" aria-label="Login" ui-sref="auth.login" flex>
 						<md-icon class="material-icons">vpn_key</md-icon>
 						<span>Login</span>
 					</md-button>
 				</span>
 
-				<span>
+				<span ng-show="hdrctr.hdrvars.authenticated">
 					<md-menu>
 						<md-button aria-label="user menu" class="md-button" ng-click="$mdOpenMenu()">
 							<md-icon md-menu-origin class="material-icons">account_box</md-icon>
