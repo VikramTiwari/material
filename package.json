@@ -1,9 +1,9 @@
 {
   "name": "material",
   "version": "0.0.1",
-  "description": "Some description of material",
+  "description": "Material CSS Framework",
   "author": {
-    "name": "Vikram Tiwari <vikramtheone1@gmail.com> "
+    "name": "Vikram Tiwari <vikramtheone1@gmail.com>"
   },
   "mean": "0.5.5",
   "engines": {
