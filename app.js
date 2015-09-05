@@ -17,6 +17,20 @@ Material.register(function(app, auth, database, circles) {
 	//We enable routing. By default the Package Object is passed to the routes
 	Material.routes(app, auth, database);
 
+	Material.aggregateAsset('css', '../lib/angular-material/angular-material.min.css', {
+		absolute: false
+	});
+
+	Material.aggregateAsset('js', '../lib/angular-aria/angular-aria.min.js', {
+		absolute: false
+	});
+	Material.aggregateAsset('js', '../lib/angular-animate/angular-animate.min.js', {
+		absolute: false
+	});
+	Material.aggregateAsset('js', '../lib/angular-material/angular-material.min.js', {
+		absolute: false
+	});
+
 	//We are adding a link to the main menu for all authenticated users
 	Material.menus.add({
 		title: 'Material',
