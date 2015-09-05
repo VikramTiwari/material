@@ -13,6 +13,7 @@ var Material = new Module('material');
  */
 Material.register(function(app, auth, database, circles) {
 
+	app.set('views', __dirname + '/server/views');
 	//We enable routing. By default the Package Object is passed to the routes
 	Material.routes(app, auth, database);
 
