@@ -1,7 +1,15 @@
 {
   "name": "material",
   "version": "0.0.1",
+  "description": "use material design in your mean project",
+  "author": {
+    "name": "Vikram Tiwari"
+  },
   "dependencies": {
     "angular-material": "latest"
+  },
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "bower install"
   }
 }
