@@ -11,11 +11,11 @@ var Material = new Module('material');
  * All MEAN packages require registration
  * Dependency injection is used to define required modules
  */
-Material.register(function(app, auth, database, circles) {
+Material.register(function(app, auth, database, circles, system) {
 
 	app.set('views', __dirname + '/server/views');
 	//We enable routing. By default the Package Object is passed to the routes
-	Material.routes(app, auth, database);
+	Material.routes(app, auth, database, system);
 
 	Material.aggregateAsset('css', '../lib/angular-material/angular-material.min.css', {
 		absolute: false
