@@ -1,13 +1,12 @@
-# material
-mean package for material design
+# Material
+MEAN package for Material Design
 
-In order to use the package in your app run `mean install material` in your mean project folder.
+In order to use this package in your MEAN app run `mean install material` in your project folder.
 
-Reference and demo for all material components: https://material.angularjs.org/latest/#/
+Reference and demo for all Material components: https://material.angularjs.org/latest/#/
 
-This package makes use of [angular-material](https://github.com/angular/material) which is the supported package for material design implementation in angular.
+This package makes use of [angular-material](https://github.com/angular/material) which is the officially supported package for Material Design implementation in Angular.
 
-
-Author: Vikram Tiwari (vikramtheone1@gmail.com)
+Author: [VikramTiwari](https://github.com/VikramTiwari)
 
 License: GNU-2.0
